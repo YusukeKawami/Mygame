@@ -99,15 +99,22 @@ var EnemyShoot = enchant.Class.create(Shoot, { //弾のクラスを継承
 
 window.onload = function() {
      //初期設定
+      
     game = new Game(320, 320);
-    game.fps = 24; game.score = 0; game.touched = false; game.preload('graphic.png');
+    game.fps = 24; game.score = 0; game.touched = false; 
+    game.preload('graphic.png','images/back1.jpg');
     game.onload = function() {
+        //背景
+        var bg3 = new Sprite(320, 320);
+            bg3.image = game.assets["images/back1.jpg"];
+            bg3.y = game.height - bg3.height;
+            game.rootScene.addChild(bg3);
         player = new Player(0, 152);//プレイヤーを出現させる
         enemies = [];
-        game.rootScene.backgroundColor = 'black';
-
+       
         game.rootScene.addEventListener('enterframe', function(){
-               //ゲームを進行させる
+            
+            //ゲームを進行させる
             if(rand(100)<10){
                     //ランダムに敵キャラを登場させる
                 var y = rand(320);

@@ -100,7 +100,7 @@ var EnemyShoot = enchant.Class.create(Shoot, { //弾のクラスを継承
 window.onload = function() {
      //初期設定
     game = new Game(320, 320);
-    game.fps = 24; game.score = 0; game.touched = false; game.preload('images/chara1.png''images/chara3.png''images/clear.png''effect0.gif''end.png''font.png''images/fsm01-002.jpg''images/fsm05-003.jpg''images/fsm12-007.jpg''graphic.png''start.png');
+    game.fps = 24; game.score = 0; game.touched = false; game.preload('graphic.png');
     game.onload = function() {
         player = new Player(0, 152);//プレイヤーを出現させる
         enemies = [];

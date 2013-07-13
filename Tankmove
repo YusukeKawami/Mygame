@@ -1,0 +1,7 @@
+enchant();
+var player = enchant.Class.create(enchant.Sprite,{
+    initialize: function(x,y){
+        enchant.Sprite.call(this,16,16);
+        this image = game.asetts['gameimage/chara3.png'];
+        this.x = x; this.y = y this.frame
+        
